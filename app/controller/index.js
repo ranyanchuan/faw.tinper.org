@@ -1,11 +1,11 @@
 const marked = require("marked");
 const fs = require('fs-extra');
 const path = require('path');
-const sidebar = require('../../static/sidebar.json');
-const components = require('../../static/components.json');
+
+const sidebar = require('../../static/sidebar.json');  //左边菜单
+const components = require('../../static/components.json'); //左边组件
 
 const renderer = new marked.Renderer();
-
 
 renderer.heading = function (text, level) {
     if (level > 1) {
@@ -84,7 +84,6 @@ module.exports = {
         let isGhpages = false;
 
         if (components[component]) { //是组件
-
             isComponentFlag = true;
             rightMenus = components[component].menus;
             changeLog = components[component].changeLog;

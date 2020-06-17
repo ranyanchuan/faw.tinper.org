@@ -27,15 +27,12 @@ Object.keys(componentsSource).forEach((item,index)=>{
             }else{
                 delete components[item]
                 console.log(`😀 download ${item} 成功,还剩  ${--length}  个`);
-                consoleItem(length)               
+                consoleItem(length)
             }
         })
     }
-    
+
 })
-
-
-
 fs.writeFileSync('./static/error.txt', '');
 
 
