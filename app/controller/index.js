@@ -72,7 +72,6 @@ Object.keys(sidebar).forEach(item => {
 
 //定义变量提取
 ///##.*代码演示/ 匹配规则改变，
-// 官网react版本
 module.exports = {
     index: async (ctx, next) => {
         let component = ctx.params.component || 'summarize';
@@ -97,39 +96,26 @@ module.exports = {
                 }
             }
 
-            let flag = await fs.pathExistsSync(path.join(__dirname, `../../tinper-acs/${component}/docs/api.md`));
+            // 获取压缩后的数据
 
-            if (!flag) { //非标准组件
-
-                isStander = false;
-                filePath = path.join(__dirname, `../../tinper-acs/${component}/README.md`);
-                data = await fs.readFileSync(filePath, 'utf-8');
-                let haveGhpage = await fs.pathExistsSync(path.join(__dirname, `../../tinper-acs/${component}/ghpages/index.html`));
-                if (haveGhpage) { //有github.io
-                    isGhpages = true;
-                    let indexHtml = fs.readFileSync(path.join(__dirname, `../../tinper-acs/${component}/ghpages/index.html`), 'utf-8');
-                    let requestJSList = indexHtml.match(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi);
-                    let scripts = '';
-                    requestJSList.forEach((item) => {
-                        if (item.indexOf(component) != -1) {
-                            scripts += item.replace('/' + component, './' + component + '/ghpages');
-                        }
-                    })
-                    let demo = '<h2 id="能力特性" class="">能力特性</h2><div id="root"></div>' + scripts;
-                    data = data.replace(/##.*代码演示/, demo);
-                } else {
-
-                }
-
-            } else { //标准组件
-                isStander = true;
-                filePath = path.join(__dirname, `../../tinper-acs/${component}/docs/api.md`);
-                data = await fs.readFileSync(filePath, 'utf-8');
-                let demo1 = '<h2 id="能力特性" class="">能力特性</h2><div id="tinperBeeDemo"></div>';
-                data = data.replace(/##.*代码演示/, demo1);
-
-
+            filePath = path.join(__dirname, `../../tinper-acs/${component}/README.md`);
+            data = await fs.readFileSync(filePath, 'utf-8');
+            let haveGhpage = await fs.pathExistsSync(path.join(__dirname, `../../tinper-acs/${component}/ghpages/index.html`));
+            if (haveGhpage) { //有github.io
+                isGhpages = true;
+                let indexHtml = fs.readFileSync(path.join(__dirname, `../../tinper-acs/${component}/ghpages/index.html`), 'utf-8');
+                let requestJSList = indexHtml.match(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi);
+                let scripts = '';
+                requestJSList.forEach((item) => {
+                    if (item.indexOf(component) != -1) {
+                        scripts += item.replace('/' + component, './' + component + '/ghpages');
+                    }
+                })
+                let demo = '<h2 id="能力特性" class="">能力特性</h2><div id="root"></div>' + scripts;
+                data = data.replace(/##.*代码演示/, demo);
             }
+
+
             let str =
                 data.match(/#? \w+/g) && data.match(/#? \w+/g).length ?
                     data.match(/#? \w+/g)[0] :
