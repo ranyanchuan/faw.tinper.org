@@ -56,11 +56,11 @@
     user-select: none;
     padding-left: 10px;
 }
-.sidebar .menu-components .menu-group .menu-item[data-iscomponent="zj"] .menu-item-heard{
+.sidebar .menu-components .menu-group .menu-item .menu-item-heard{
     padding-left: 60px;
 }
 
-.sidebar .menu-components .menu-group .menu-item[data-iscomponent="zj"] .menu-item-com{
+.sidebar .menu-components .menu-group .menu-item .menu-item-com{
     margin-left: -60px;
     width: 250px;
 }

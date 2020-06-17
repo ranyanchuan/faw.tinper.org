@@ -123,7 +123,7 @@ hue-6-2: #e6c07b
   position: absolute;
   right: 0;
   top: 0;
-  color: #E14C46;
+  color: #3a5ca5;
   font-size: 14px;
   cursor: pointer;
 }
@@ -218,7 +218,7 @@ hue-6-2: #e6c07b
 .component-drawerc .drawer-header{
   padding: 0 20px;
   border-radius: 0;
-  background: #E14C46;
+  background: #3a5ca5;
   color: #fff;
   border-bottom: 1px solid #e8e8e8;
 }

@@ -1,0 +1,130 @@
+{
+    "ac-button": {
+        "name": "按钮"
+    },
+    "ac-btns": {
+        "name": "项目按钮"
+    },
+    "ac-grids": {
+        "name": "复杂表格"
+    },
+    "ac-gridcn": {
+        "name": "复杂表格全编辑"
+    },
+    "ac-split-area": {
+        "name": "区域分割"
+    },
+    "ac-tips": {
+        "name": "消息提示"
+    },
+    "ac-barcode": {
+        "name": "条形码组件"
+    },
+    "ac-qrcodes": {
+        "name": "二维码组件"
+    },
+    "ac-input-locale": {
+        "name": "多语输入"
+    },
+    "ac-mobile-locale": {
+        "name": "手机国际化"
+    },
+    "ac-complex-search-panel": {
+        "name": "复杂查询面板"
+    },
+    "ac-spreadsheet": {
+        "name": "电子表格"
+    },
+    "bee-complex-grid": {
+        "name": "复杂表格"
+    },
+    "ac-hand-table": {
+        "name": "Hand表格"
+    },
+    "ac-thermometer": {
+        "name": "温度计、液位计组件"
+    },
+    "ac-city-select": {
+        "name": "城市选择"
+    },
+    "ac-pagelayout": {
+        "name": "布局组件"
+    },
+    "ac-hotkey-button": {
+        "name": "快捷键按钮"
+    },
+    "ac-search-tabs": {
+        "name": "查询页签"
+    },
+    "ac-split-button": {
+        "name": "分割下拉按钮"
+    },
+    "ac-header": {
+        "name": "页头信息"
+    },
+    "ac-search-cn": {
+        "name": "查询面板"
+    },
+    "ac-form-layout": {
+        "name": "表单布局"
+    },
+    "ac-file-list":{
+        "name":"附件列表"
+    },
+    "ac-approval-board":{
+        "name":"流程面板"
+    },
+    "ac-approval-submit":{
+        "name":"流程提交"
+    },
+    "ac-print":{
+        "name":"打印"
+    },
+
+
+    "ac-editor-sany":{
+        "name":"富文本编辑器sany版本"
+    },
+    "ac-multi-tabs":{
+      "name":"多页签组件"  
+    },
+    "ac-navbar":{
+      "name":"导航栏组件"  
+    },
+    "ac-toast": {
+        "name": "消息"
+    },
+    "yyuap-bpm": {
+        "name": "Bpm流程组件"
+    },
+    "ac-attachment": {
+        "name": "上传列表组件"
+    },
+    "ac-upload": {
+        "name": "附件管理"
+    },
+    "ac-editor": {
+        "name": "富文本编辑"
+    },
+    "ac-search-panel": {
+        "name": "查询面板"
+    },
+    "ref-tree": {
+        "name": "树参照"
+    },
+    "ref-multiple-table": {
+        "name": "表参照"
+    },
+    "ref-tree-table": {
+        "name": "树表参照"
+    },
+    "ref-tree-transfer": {
+        "name": "树穿梭参照"
+    },
+    "ref-combobox": {
+        "name": "下拉参照"
+    },
+    "mdf-refer": {
+        "name": "mdf参照"
+    }
+}

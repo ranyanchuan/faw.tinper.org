@@ -3,7 +3,6 @@
         <span class="nav-logo ">
             <a href="/">
                 <img src="https://easyux-test.faw.cn/uiux-doc/img/faw-logo.9539bdec.svg">
-                <!--<img src="//iuap-design-cdn.oss-cn-beijing.aliyuncs.com/static/tinper-bee/logo/iuapdesign.svg">-->
                 <span class='version'>V<%= latestVersion %></span>
             </a>
         </span>
@@ -24,20 +23,23 @@
             </li>
             <!--<li class="language">设计语言</li>-->
             <li>
-                <a class="first-show" href="#">基础组件</a>
+                <a  href="/tinper-bee">基础组件</a>
             </li>
-            <!--<li>-->
-                <!--<a href="/tinper-acs">应用组件</a>-->
-            <!--</li>-->
+            <li>
+                <a  href="#">应用组件</a>
+            </li>
+            <li>
+                <a  href="#">一汽组件</a>
+            </li>
             <!--<li>-->
                 <!--<a href="/ecology">社区精选</a>-->
             <!--</li>-->
             <!--<li>-->
-                <!--<a  href="/prepaper">典型案例</a>-->
+                <!--<a href="/prepaper" >典型案例</a>-->
             <!--</li>-->
             <!--<li class="lang-select">-->
                 <!--<div class="u-select u-select-focused u-select-enabled" id="selectLang">-->
-                    <!--<div class="u-select-selection -->
+                    <!--<div class="u-select-selection-->
         <!--u-select-selection&#45;&#45;single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false"-->
                         <!--tabindex="0">-->
                         <!--<div class="u-select-selection-rendered" name="input">-->
@@ -66,26 +68,33 @@
                         <!--</div>-->
                     <!--</div>-->
             <!--</li>-->
+
+
         </ul>
     </div>
 </div>
 
-<div class="mob-nav">
-    <a href="/">
-        <img src='//design.yonyoucloud.com/static/tinper-bee/logo/iuapdesign.svg' />
-        <span class='version'>当前 <%= latestVersion %></span>
-    </a>
-    <span class="uf uf-navmenu" onclick="displayOrHide()">
-        <ul id="itemList0">
-            <li><a href="/" >首页</a></li>
-            <li class="lang">设计语言</li>
-            <li class="basecomp"><a href="#">基础组件</a></li>
-            <li><a href="/tinper-acs">应用组件</a></li>
-            <li><a href="/ecology">社区精选</a></li>
-            <li><a href="/prepaper">典型案例</a></li>
-        </ul>
-    </span>
-</div>
+
+<!--手机端访问-->
+
+<!--<div class="mob-nav">-->
+        <!--<a href="/">-->
+                <!--<img src='//design.yonyoucloud.com/static/tinper-bee/logo/iuapdesign.svg' />-->
+                <!--<span class='version'>当前<%= latestVersion %></span>-->
+        <!--</a>-->
+        <!--<span class="uf uf-navmenu" onclick="displayOrHide()">-->
+        <!--<ul id="itemList0">-->
+            <!--<li><a href="/" >首页</a></li>-->
+            <!--<li class="lang">设计语言</li>-->
+            <!--<li><a href="/tinper-bee">基础组件</a></li>-->
+            <!--<li class="basecomp" ><a href="#" >应用组件</a></li>-->
+            <!--<li>-->
+                <!--<a href="/ecology">社区精选</a>-->
+            <!--</li>-->
+            <!--<li ><a href="/prepaper">典型案例</a></li>-->
+        <!--</ul>-->
+    <!--</span>-->
+<!--</div>-->
 
 <script>
 
@@ -115,7 +124,7 @@
         }
 
     }
-    select.onclick = function() {
+    select.onclick = (e) => {
         langShowHide()
     };
     selectOptions.forEach(item => {
@@ -123,6 +132,7 @@
             langShowHide(true)
         };
     })
+
 
     //移动端适配
     var hide=true;

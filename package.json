@@ -1,37 +1,30 @@
 {
-  "name": "bee.tinper.org",
-  "version": "1.6.11",
-  "description": "bee.tinper.org",
-  "main": "server/index.js",
+  "name": "ucf-node",
+  "version": "1.0.0",
+  "description": "Based with Koa 2.x",
+  "main": "index.js",
   "scripts": {
-    "getDemos": "node app/utils/downLoadDemos.js",
+    "init": "node app/utils/getComponent.js",
+    "init2": "node app/utils/getComponentTwo.js",
+    "getMenu": "node app/utils/getRightMenu.js",
+    "getRelease": "node app/utils/getRelease.js",
+    "writeFile": "node app/utils/getComponent.js && node app/utils/getRightMenu.js && node app/utils/getRelease.js",
+    "writeFile2": "node app/utils/getComponentTwo.js && node app/utils/getRightMenu.js && node app/utils/getRelease.js",
+    "dev": "node --inspect app/app.js",
     "start": "node app/app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iuap-design/bee.tinper.org.git"
-  },
   "keywords": [],
-  "author": "iuap",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/iuap-design/bee.tinper.org/issues"
-  },
-  "homepage": "https://github.com/iuap-design/bee.tinper.org#readme",
-  "devDependencies": {},
+  "author": "yonyou iuap fed",
+  "license": "ISC",
   "dependencies": {
-    "@libraui/antd-mobile": "0.0.3",
-    "ali-oss": "^6.2.1",
     "axios": "^0.18.0",
     "download": "^7.1.0",
     "download-git-repo": "^1.1.0",
     "fs-extra": "^7.0.1",
     "ghreleases": "^3.0.2",
-    "git-tags-remote": "^1.0.1",
-    "js-beautify": "^1.10.2",
+    "ip": "^1.1.5",
     "koa": "^2.6.2",
     "koa-bodyparser": "^4.2.1",
-    "koa-cors": "0.0.16",
     "koa-ejs": "^4.2.0",
     "koa-less": "0.0.3",
     "koa-nunjucks-2": "^3.0.2",
@@ -39,14 +32,21 @@
     "koa-static": "^5.0.0",
     "latest-version": "^5.1.0",
     "log4js": "^3.0.6",
-    "marked": "^0.7.0",
-    "minify": "^4.1.3",
+    "marked": "^0.6.1",
     "moment": "^2.24.0",
-    "node-fetch": "^2.3.0",
-    "nunjucks": "^3.1.6",
-    "preact": "^10.0.5",
-    "preact-render-to-string": "^5.1.1",
-    "qr.js": "0.0.0",
-    "qrcode": "^1.4.4"
-  }
+    "nunjucks": "^3.1.6"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iuap-design/ucf-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iuap-design/ucf-node/issues"
+  },
+  "homepage": "https://github.com/iuap-design/ucf-node#readme"
 }
