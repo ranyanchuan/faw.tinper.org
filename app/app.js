@@ -1,13 +1,10 @@
-const Koa = require('koa')
-const app = new Koa()
+const Koa = require('koa');
 const render = require('koa-ejs');
 const path = require('path');
-const marked = require("marked");
-const fs = require('fs-extra');
-const router = require('./router')
-const middleware = require('./middleware')
+const router = require('./router');
+const middleware = require('./middleware');
 
-
+const app = new Koa();
 render(app, {
     root: path.join(__dirname, 'views'),
     layout: 'index',
@@ -17,8 +14,8 @@ render(app, {
 });
 
 
-router(app)
-middleware(app)
+router(app);
+middleware(app);
 
 app.listen(3002, () => {
     console.log('服务运行在 http://localhost:3002')
