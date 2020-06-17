@@ -1,0 +1,43 @@
+{
+  "name": "ucf-webapp",
+  "version": "1.1.7",
+  "description": "开发思路：[大型企业应用在前端微应用视角下的思考](https://github.com/iuap-design/blog/issues/306)",
+  "main": "index.js",
+  "scripts": {
+    "writeFile": "node writeIndex.js",
+    "start": "cross-env NODE_ENV=development node writeIndex.js && ucf-scripts start --homepage=demos#/Button",
+    "server": "cross-env NODE_ENV=server node writeIndex.js && ucf-scripts start --homepage=demos#/Button",
+    "build": "cross-env NODE_ENV=server node writeIndex.js && ucf-scripts build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iuap-design/ucf-webapp.git"
+  },
+  "author": "Yonyou FED",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iuap-design/ucf-webapp/issues"
+  },
+  "homepage": "https://github.com/iuap-design/ucf-webapp#readme",
+  "devDependencies": {
+    "ucf-scripts": "^1.1.9",
+    "copy-webpack-plugin": "^5.0.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "@babel/runtime": "^7.4.0",
+    "antd-mobile": "^2.3.1",
+    "antd-mobile-demo-data": "^0.3.0",
+    "array-tree-filter": "^2.1.0",
+    "classnames": "^2.2.6",
+    "cross-env": "^6.0.3",
+    "fs-extra": "^8.1.0",
+    "mirrorx": "^0.2.13",
+    "prop-types": "^15.7.2",
+    "rc-form": "^2.4.11",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router": "^5.1.2",
+    "react-sticky": "^6.0.3"
+  }
+}
