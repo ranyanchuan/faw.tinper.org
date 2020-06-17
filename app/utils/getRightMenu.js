@@ -1,12 +1,8 @@
 const fs = require('fs-extra');
 let componentsSource = require('../../static/componentsSource.json');
-let components = require('../../static/components.json');
-let componentType = require('../../static/componentsType.json')
-let doc = '';//doc内容
+let componentType = require('../../static/componentsType.json');
 let regJs = /^Demo.*\.js$/;//判断是否是js文件
 let regApi = /#{3,3}(.*)\s/g;
-
-
 
 function sortNumber(a,b){
     return a.replace(/[^0-9]/ig,"") - b.replace(/[^0-9]/ig,"")
@@ -14,7 +10,7 @@ function sortNumber(a,b){
 
 /**
  * 获得 代码演示 的子标题
- * @param {*} component 
+ * @param {*} component
  */
 let getDemoTitle = (component)=>{
     let twoTitle = {
@@ -36,7 +32,7 @@ let getDemoTitle = (component)=>{
          let demosTitle = [];//二级标题
          file.forEach(item=>{
              if(regJs.test(item)){
-                let data = fs.readFileSync(`${baseUrl}/${item}`,"utf-8"); 
+                let data = fs.readFileSync(`${baseUrl}/${item}`,"utf-8");
                 let title = data.match(/@title(.{0,})/)[1];
                 demosTitle.push(title.trim());
              }
@@ -51,14 +47,14 @@ let getDemoTitle = (component)=>{
 
 /**
  * 获得 API 的子标题
- * @param {*} component 
+ * @param {*} component
  */
 let getApiTitle = (component,twoTitle)=>{
     let path = `./tinper-acs/${component}/docs/api.md`;
     if(componentType['others'].indexOf(component)!=-1){
         path = `./tinper-acs/${component}/README.md`;
     }
-    let data = fs.readFileSync(path,"utf-8"); 
+    let data = fs.readFileSync(path,"utf-8");
     let apiTitles = [];
     let ary = data.match(regApi);
     if(ary&&ary.length){
