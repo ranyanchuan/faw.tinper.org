@@ -36,7 +36,6 @@ marked.setOptions({
     smartypants: false
 });
 
-
 /**
  * 获得文档的导航菜单，支持三级标题
  */
